@@ -1,0 +1,43 @@
+{
+  "name": "icons",
+  "license": "MIT",
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lerna": "lerna",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@terenceodonoghue/eslint-config-react": "^1.0.12",
+    "@terenceodonoghue/stylelint-config-base": "^1.0.4",
+    "@types/react": "^17.0.14",
+    "@typescript-eslint/eslint-plugin": "4.28.2",
+    "@typescript-eslint/parser": "4.28.2",
+    "autoprefixer": "latest",
+    "eslint": "7.30.0",
+    "eslint-import-resolver-typescript": "2.4.0",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lerna": "4.0.0",
+    "postcss": "latest",
+    "prettier": "2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-prettier": "^1.2.0",
+    "tailwindcss": "latest",
+    "typescript": "4.3.5"
+  }
+}

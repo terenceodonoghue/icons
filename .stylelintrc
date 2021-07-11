@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@terenceodonoghue/stylelint-config-base"
+  ]
+}
