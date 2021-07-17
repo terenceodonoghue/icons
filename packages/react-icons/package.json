@@ -1,0 +1,46 @@
+{
+  "name": "@terenceodonoghue/react-icons",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/terenceodonoghue/icons.git",
+    "directory": "packages/react-icons"
+  },
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
+  "type": "module",
+  "exports": {
+    "./fantasticons": {
+      "import": "./dist/mjs/fantasticons/index.js",
+      "require": "./dist/cjs/fantasticons/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "fantasticons": [
+        "./dist/mjs/fantasticons/index.d.ts",
+        "./dist/cjs/fantasticons/index.d.ts"
+      ]
+    }
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "scripts": {
+    "prepack": "node scripts/generate.js && yarn concurrently \"yarn:prepack:*\"",
+    "prepack:cjs": "tsc -p tsconfig-cjs.json",
+    "prepack:mjs": "tsc -p tsconfig-mjs.json",
+    "prepare": "rimraf ./dist \"./out-svgr/*/\""
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@terenceodonoghue/svg-icons": "workspace:packages/svg-icons",
+    "concurrently": "^7.0.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}

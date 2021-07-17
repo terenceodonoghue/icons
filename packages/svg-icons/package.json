@@ -1,0 +1,25 @@
+{
+  "name": "@terenceodonoghue/svg-icons",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/terenceodonoghue/icons.git",
+    "directory": "packages/svg-icons"
+  },
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
+  "type": "module",
+  "exports": {
+    "./fantasticons": "./dist/fantasticons/index.js"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "scripts": {
+    "prepack": "node scripts/generate.js",
+    "prepare": "rimraf ./dist"
+  },
+  "files": [
+    "dist"
+  ]
+}
