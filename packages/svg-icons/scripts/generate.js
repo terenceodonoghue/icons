@@ -3,7 +3,7 @@ import { camelCase } from 'lodash-es';
 import memFs from 'mem-fs';
 import editor from 'mem-fs-editor';
 import { dirname, parse, resolve } from 'path';
-import { optimize } from 'svgo';
+import { extendDefaultPlugins, optimize } from 'svgo';
 import { fileURLToPath } from 'url';
 import { parseStringPromise } from 'xml2js';
 
@@ -18,12 +18,13 @@ glob('**/*.svg', { cwd: resolve(__dirname, '../svg') }, async (err, files) => {
 
   Promise.all(
     files.map(async (file) => {
-      const outFile = file.replace('.svg', '.js');
-      const identifier = camelCase(parse(outFile).name);
+      const outFile = `${camelCase(parse(file).name)}.js`;
+      const outDir = parse(file).dir;
+      const identifier = parse(outFile).name;
 
       fs.copyTpl(
         indexTemplate,
-        resolve(__dirname, '../dist/glyphs/index.js'),
+        resolve(__dirname, '../dist', outDir, 'index.js'),
         {
           identifier,
           path: `./${parse(outFile).base}`,
@@ -36,13 +37,14 @@ glob('**/*.svg', { cwd: resolve(__dirname, '../svg') }, async (err, files) => {
 
       const { data } = optimize(fs.read(resolve(__dirname, '../svg', file)), {
         multipass: true,
+        plugins: extendDefaultPlugins(['removeDimensions', 'removeXMLNS']),
       });
 
       const result = await parseStringPromise(data);
 
       await fs.copyTplAsync(
         iconTemplate,
-        resolve(__dirname, '../dist', outFile),
+        resolve(__dirname, '../dist', outDir, outFile),
         {
           identifier,
           content: JSON.stringify(result),

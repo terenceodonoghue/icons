@@ -1,1 +1,1 @@
-# svg-icons
+# @terenceodonoghue/svg-icons

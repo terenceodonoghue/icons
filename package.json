@@ -11,8 +11,10 @@
     "build": "next build",
     "start": "next start",
     "lerna": "lerna",
-    "lint": "eslint --ext .ts,.tsx ./",
-    "prepublish": "yarn lint"
+    "lint": "eslint --ext .js,.ts,.tsx ./",
+    "prepack": "lerna run prepack",
+    "prepare": "lerna run prepare",
+    "prepublishOnly": "yarn lint"
   },
   "dependencies": {
     "next": "^11.0.1",
@@ -20,26 +22,34 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@terenceodonoghue/eslint-config-react": "^1.0.12",
-    "@terenceodonoghue/stylelint-config-base": "^1.0.4",
-    "@types/react": "^17.0.14",
-    "@typescript-eslint/eslint-plugin": "^4.28.3",
-    "@typescript-eslint/parser": "^4.28.3",
-    "autoprefixer": "latest",
+    "@svgr/core": "^5.5.0",
+    "@types/react": "^17.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "autoprefixer": "^10.3.1",
+    "ejs": "^3.1.6",
     "eslint": "^7.31.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "glob": "^7.1.7",
     "lerna": "4.0.0",
-    "postcss": "latest",
+    "lodash-es": "^4.17.21",
+    "mem-fs": "^2.2.1",
+    "mem-fs-editor": "^9.0.2",
+    "postcss": "^8.3.6",
     "prettier": "2.3.2",
+    "rimraf": "^3.0.2",
     "stylelint": "^13.13.1",
     "stylelint-prettier": "^1.2.0",
-    "tailwindcss": "latest",
-    "typescript": "4.3.5"
+    "svgo": "^2.3.1",
+    "tailwindcss": "^2.2.7",
+    "typescript": "4.3.5",
+    "xml2js": "^0.4.23"
   }
 }
