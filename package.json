@@ -12,8 +12,6 @@
     "start": "next start",
     "lerna": "lerna",
     "lint": "eslint --ext .js,.ts,.tsx ./",
-    "prepack": "lerna run prepack",
-    "prepare": "lerna run prepare",
     "prepublishOnly": "yarn lint"
   },
   "dependencies": {
