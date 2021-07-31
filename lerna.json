@@ -1,6 +1,7 @@
 {
   "command": {
     "publish": {
+      "graphType": "all",
       "registry": "https://npm.pkg.github.com"
     }
   },
