@@ -46,12 +46,13 @@ const iconTemplate = (
 };
 
 const indexTemplate = resolve(__dirname, '../templates/index.ts.ejs');
+const packageJsonTemplate = resolve(__dirname, '../templates/package.json.ejs');
 
 Promise.all(
   Object.entries(iconSets).map(([iconSetName, iconSet]) => {
     const outDir = iconSetName;
 
-    return Promise.all(
+    Promise.all(
       Object.entries(iconSet).map(async ([iconName, icon]) => {
         const content = builder.buildObject(icon);
 
@@ -101,9 +102,17 @@ Promise.all(
             append: true,
           },
         );
-
-        fs.commit();
       }),
     );
+
+    fs.copyTpl(
+      packageJsonTemplate,
+      resolve(__dirname, '../dist/cjs/package.json'),
+      {
+        type: `"commonjs"`,
+      },
+    );
+
+    return fs.commit();
   }),
 );

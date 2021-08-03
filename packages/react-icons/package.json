@@ -10,12 +10,16 @@
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
-    "./glyphs": "./dist/glyphs/index.js"
+    "./glyphs": {
+      "import": "./dist/mjs/glyphs/index.js",
+      "require": "./dist/cjs/glyphs/index.js"
+    }
   },
   "typesVersions": {
     "*": {
       "glyphs": [
-        "./dist/glyphs/index.d.ts"
+        "./dist/mjs/glyphs/index.d.ts",
+        "./dist/cjs/glyphs/index.d.ts"
       ]
     }
   },
@@ -23,7 +27,9 @@
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "scripts": {
-    "prepack": "node scripts/generate.js && tsc",
+    "prepack": "node scripts/generate.js && concurrently \"yarn:prepack:*\"",
+    "prepack:cjs": "tsc -p tsconfig-cjs.json",
+    "prepack:mjs": "tsc -p tsconfig-mjs.json",
     "prepare": "rimraf ./dist \"./out-svgr/*/\""
   },
   "files": [
