@@ -42,7 +42,6 @@ module.exports = {
     'no-use-before-define': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     'react/jsx-props-no-spreading': 'off',
-    'react/prop-types': 'off',
   },
   settings: {
     'import/resolver': {

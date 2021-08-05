@@ -10,16 +10,16 @@
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
-    "./glyphs": {
-      "import": "./dist/mjs/glyphs/index.js",
-      "require": "./dist/cjs/glyphs/index.js"
+    "./fantasticons": {
+      "import": "./dist/mjs/fantasticons/index.js",
+      "require": "./dist/cjs/fantasticons/index.js"
     }
   },
   "typesVersions": {
     "*": {
-      "glyphs": [
-        "./dist/mjs/glyphs/index.d.ts",
-        "./dist/cjs/glyphs/index.d.ts"
+      "fantasticons": [
+        "./dist/mjs/fantasticons/index.d.ts",
+        "./dist/cjs/fantasticons/index.d.ts"
       ]
     }
   },

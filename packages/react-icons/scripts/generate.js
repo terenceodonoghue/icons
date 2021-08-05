@@ -1,5 +1,5 @@
 import svgr from '@svgr/core';
-import * as glyphs from '@terenceodonoghue/svg-icons/glyphs';
+import * as fantasticons from '@terenceodonoghue/svg-icons/fantasticons';
 import { upperFirst } from 'lodash-es';
 import memFs from 'mem-fs';
 import editor from 'mem-fs-editor';
@@ -18,7 +18,7 @@ const store = memFs.create();
 const fs = editor.create(store);
 
 const iconSets = {
-  glyphs,
+  fantasticons,
 };
 
 const iconTemplate = (

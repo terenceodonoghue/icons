@@ -10,7 +10,7 @@
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
-    "./glyphs": "./dist/glyphs/index.js"
+    "./fantasticons": "./dist/fantasticons/index.js"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
