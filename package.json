@@ -10,7 +10,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lerna": "lerna",
     "lint": "eslint --ext .js,.ts,.tsx ./",
     "prepublishOnly": "yarn lint"
   },
@@ -21,6 +20,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.19.0",
     "@svgr/core": "^6.2.0",
     "@types/react": "^17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
@@ -38,7 +38,6 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "glob": "^7.2.0",
-    "lerna": "4.0.0",
     "lodash-es": "^4.17.21",
     "mem-fs": "^2.2.1",
     "mem-fs-editor": "^9.4.0",
