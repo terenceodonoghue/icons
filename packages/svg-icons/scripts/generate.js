@@ -3,7 +3,7 @@ import { camelCase } from 'lodash-es';
 import memFs from 'mem-fs';
 import editor from 'mem-fs-editor';
 import { dirname, parse, resolve } from 'path';
-import { extendDefaultPlugins, optimize } from 'svgo';
+import { optimize } from 'svgo';
 import { fileURLToPath } from 'url';
 import { parseStringPromise } from 'xml2js';
 
@@ -37,7 +37,7 @@ glob('**/*.svg', { cwd: resolve(__dirname, '../svg') }, async (err, files) => {
 
       const { data } = optimize(fs.read(resolve(__dirname, '../svg', file)), {
         multipass: true,
-        plugins: extendDefaultPlugins(['removeDimensions', 'removeXMLNS']),
+        plugins: ['preset-default', 'removeDimensions', 'removeXMLNS'],
       });
 
       const result = await parseStringPromise(data);

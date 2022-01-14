@@ -1,4 +1,4 @@
-import svgr from '@svgr/core';
+import { transform } from '@svgr/core';
 import * as fantasticons from '@terenceodonoghue/svg-icons/fantasticons';
 import { upperFirst } from 'lodash-es';
 import memFs from 'mem-fs';
@@ -22,26 +22,23 @@ const iconSets = {
 };
 
 const iconTemplate = (
-  { template },
-  opts,
-  { imports, interfaces, componentName, jsx, exports },
+  { componentName, exports, imports, interfaces, jsx },
+  { tpl },
 ) => {
-  const plugins = ['jsx'];
+  const formattedName = `${componentName}: React.FunctionComponent<IconDefinition>`;
 
-  const typeScriptTpl = template.smart({ plugins });
+  return tpl`
+  ${imports}
 
-  const formattedName = `${componentName.name}: React.FunctionComponent<IconDefinition>`;
+  ${interfaces}
 
-  return typeScriptTpl.ast`
-    ${imports}
-    ${interfaces}
-    import { IconDefinition } from '../types';
-    
-    const ${formattedName} = ({ fill, ...props }) => {
-      return ${jsx};
-    }
-    
-    ${exports}
+  import { IconDefinition } from '../types';
+  
+  const ${formattedName} = ({ fill, ...props }) => {
+    return ${jsx};
+  }
+  
+  ${exports}
   `;
 };
 
@@ -64,7 +61,7 @@ Promise.all(
           `${upperFirst(iconName)}.tsx`,
         );
 
-        const jsx = await svgr.default(
+        const jsx = await transform(
           content,
           {
             icon: true,
