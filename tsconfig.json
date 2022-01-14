@@ -26,10 +26,5 @@
   ],
   "exclude": [
     "node_modules"
-  ],
-  "references": [
-    {
-      "path": "./packages/react-icons"
-    }
   ]
 }

@@ -975,14 +975,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@terenceodonoghue/react-icons@workspace:packages/react-icons"
   dependencies:
-    "@terenceodonoghue/svg-icons": ^1.0.0
+    "@terenceodonoghue/svg-icons": "workspace:packages/svg-icons"
+    concurrently: ^7.0.0
   peerDependencies:
     react: "*"
     react-dom: "*"
   languageName: unknown
   linkType: soft
 
-"@terenceodonoghue/svg-icons@^1.0.0, @terenceodonoghue/svg-icons@workspace:packages/svg-icons":
+"@terenceodonoghue/svg-icons@workspace:packages/svg-icons":
   version: 0.0.0-use.local
   resolution: "@terenceodonoghue/svg-icons@workspace:packages/svg-icons"
   languageName: unknown
@@ -2026,7 +2027,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.0":
+"chalk@npm:^4.0.0":
   version: 4.1.1
   resolution: "chalk@npm:4.1.1"
   dependencies:
@@ -2036,7 +2037,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.1.2":
+"chalk@npm:^4.1.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -2577,9 +2578,9 @@ __metadata:
   linkType: hard
 
 "date-fns@npm:^2.16.1":
-  version: 2.23.0
-  resolution: "date-fns@npm:2.23.0"
-  checksum: 485216d550255a548552db16379e7a5cd440e262b90fbdc0362f63ee71d0e74bd00ce29ca8d76b343f6df36c1ecb6f22edba0b72848a4c32674e755619695c1f
+  version: 2.28.0
+  resolution: "date-fns@npm:2.28.0"
+  checksum: a0516b2e4f99b8bffc6cc5193349f185f195398385bdcaf07f17c2c4a24473c99d933eb0018be4142a86a6d46cb0b06be6440ad874f15e795acbedd6fd727a1f
   languageName: node
   linkType: hard
 
@@ -4145,7 +4146,6 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.9.1
     "@typescript-eslint/parser": ^5.9.1
     autoprefixer: ^10.4.2
-    concurrently: ^7.0.0
     ejs: ^3.1.6
     eslint: ^8.6.0
     eslint-config-airbnb: ^18.2.1
