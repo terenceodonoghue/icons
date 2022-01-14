@@ -12,7 +12,7 @@ const GitHubCorner: FunctionComponent = () => (
         height={80}
         viewBox="0 0 250 250"
         style={{
-          fill: '#17183B',
+          fill: '#151513',
           color: '#F6F7FC',
           position: 'absolute',
           top: 0,
