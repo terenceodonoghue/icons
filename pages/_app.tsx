@@ -1,10 +1,19 @@
 import React, { ReactElement } from 'react';
 import { AppProps } from 'next/app';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import 'tailwindcss/tailwind.css';
+import Head from 'next/head';
+import { GitHubCorner } from '../components';
+import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): ReactElement => (
-  <Component {...pageProps} />
+  <>
+    <Head>
+      <title>Fantasticons ✨ A totally free icon collection</title>
+    </Head>
+    <GitHubCorner />
+    <div className="min-h-screen bg-fantasticons">
+      <Component {...pageProps} />
+    </div>
+  </>
 );
 
 export default MyApp;
