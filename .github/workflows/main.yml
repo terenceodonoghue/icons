@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: actions/setup-node@v1
+        with:
+          always-auth: true
+          node-version: '16.x'
+      - name: Install
+        run: |
+          npm install -g --silent gh-pages
+          yarn install
+      - name: Build
+        if: success()
+        run: |
+          yarn prepack
+          yarn build
+          yarn export
+      - name: Deploy
+        if: success()
+        run: |
+          touch out/.nojekyll
+          git config user.name "Terence O'Donoghue"
+          git config user.email "1697905+${GITHUB_ACTOR}@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          gh-pages --dist out --dotfiles --message "${GITHUB_REF##*/}-${GITHUB_SHA::8}"

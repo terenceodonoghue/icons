@@ -35,8 +35,10 @@
   "files": [
     "dist"
   ],
+  "dependencies": {
+    "@terenceodonoghue/svg-icons": "workspace:packages/svg-icons"
+  },
   "devDependencies": {
-    "@terenceodonoghue/svg-icons": "workspace:packages/svg-icons",
     "concurrently": "^7.0.0"
   },
   "peerDependencies": {
