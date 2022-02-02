@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NextPage } from 'next';
 import * as Icons from '@terenceodonoghue/react-icons/fantasticons';
 
-const HomePage: NextPage = () => {
+const HomePage: NextPage = function HomePage() {
   const [selectedIcons, setSelectedIcons] = useState(
     Object.keys(Icons).reduce(
       (prev, curr) => ({

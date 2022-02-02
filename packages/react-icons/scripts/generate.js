@@ -33,8 +33,8 @@ const iconTemplate = (
   ${interfaces}
 
   import { IconDefinition } from '../types';
-  
-  const ${formattedName} = ({ fill, ...props }) => {
+
+  const ${formattedName} = function ${componentName}({ fill, ...props }) {
     return ${jsx};
   }
   
