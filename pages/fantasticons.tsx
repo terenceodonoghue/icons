@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { NextPage } from 'next';
 import { animated, config, useTransition } from '@react-spring/web';
 import * as Icons from '@terenceodonoghue/react-icons/fantasticons';
 
 const HomePage: NextPage = function HomePage() {
+  const icons = useMemo(() => Object.entries(Icons), []);
+
   const [selectedIcons, setSelectedIcons] = useState(
     Object.keys(Icons).reduce(
       (prev, curr) => ({
@@ -14,7 +16,7 @@ const HomePage: NextPage = function HomePage() {
     ),
   );
 
-  const transitions = useTransition(Object.entries(Icons), {
+  const transitions = useTransition(icons, {
     config: config.gentle,
     from: { opacity: 0, transform: `translate3d(20px,20px,0)` },
     enter: { opacity: 1, transform: `translate3d(0,0,0)` },
