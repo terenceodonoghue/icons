@@ -34,7 +34,7 @@ const HomePage: NextPage = function HomePage() {
           ✨ A totally free icon collection
         </h2>
       </header>
-      <main className="grid gap-12 p-6 md:p-12 md:gap-20 sm:rounded-md grid-cols-auto-fit justify-items-center">
+      <main className="grid gap-10 p-6 md:p-12 md:gap-20 sm:rounded-md grid-cols-auto-fit justify-items-center">
         {transitions(({ opacity, transform }, [name, Icon]) => (
           <animated.div
             style={{
