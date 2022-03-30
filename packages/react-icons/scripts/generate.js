@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { transform } from '@svgr/core';
 import * as fantasticons from '@terenceodonoghue/svg-icons/fantasticons';
 import { upperFirst } from 'lodash-es';

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import glob from 'glob';
 import { camelCase } from 'lodash-es';
 import memFs from 'mem-fs';

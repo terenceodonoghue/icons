@@ -1,0 +1,50 @@
+{
+  "extends": "@nrwl/workspace/presets/npm.json",
+  "npmScope": "icons",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "prepack", "lint"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "prepack",
+        "projects": "dependencies"
+      }
+    ],
+    "dev": [
+      {
+        "target": "prepack",
+        "projects": "dependencies"
+      }
+    ],
+    "export": [
+      {
+        "target": "build",
+        "projects": "self"
+      }
+    ],
+    "prepack": [
+      {
+        "target": "prepack",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "packages"
+  },
+  "pluginsConfig": {
+    "@nrwl/js": {
+      "analyzeSourceFiles": false
+    }
+  }
+}

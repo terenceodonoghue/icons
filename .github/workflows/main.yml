@@ -25,14 +25,12 @@ jobs:
       - name: Build
         if: success()
         run: |
-          yarn prepack
-          yarn build
-          yarn export
+          yarn nx export web
       - name: Deploy
         if: success()
         run: |
-          touch out/.nojekyll
+          touch ./apps/web/out/.nojekyll
           git config user.name "Terence O'Donoghue"
           git config user.email "1697905+${GITHUB_ACTOR}@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          gh-pages --dist out --dotfiles --message "${GITHUB_REF##*/}-${GITHUB_SHA::8}"
+          gh-pages --dist ./apps/web/out --dotfiles --message "${GITHUB_REF##*/}-${GITHUB_SHA::8}"
