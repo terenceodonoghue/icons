@@ -28,7 +28,7 @@
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.tsx --ignore-path ../../.eslintignore ./",
+    "lint": "eslint --ext .js,.ts,.tsx --ignore-path ../../.eslintignore --max-warnings=0 ./",
     "prepack": "node scripts/generate.js && yarn concurrently \"yarn:prepack:*\"",
     "prepack:cjs": "tsc -p tsconfig-cjs.json",
     "prepack:mjs": "tsc -p tsconfig-mjs.json",

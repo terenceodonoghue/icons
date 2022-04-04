@@ -17,7 +17,7 @@
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "scripts": {
-    "lint": "eslint --ext .js --ignore-path ../../.eslintignore ./",
+    "lint": "eslint --ext .js --ignore-path ../../.eslintignore --max-warnings=0 ./",
     "prepack": "node scripts/generate.js",
     "prepare": "rimraf ./dist"
   },
