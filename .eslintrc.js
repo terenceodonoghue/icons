@@ -30,13 +30,6 @@ module.exports = {
         tsx: 'never',
       },
     ],
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: ['./packages/*/scripts/*'],
-        packageDir: './',
-      },
-    ],
     'import/no-unresolved': 'off', // Until eslint-plugin-import supports ESM
     'no-underscore-dangle': 'off',
     'no-use-before-define': 'off',
