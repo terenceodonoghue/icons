@@ -1765,11 +1765,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@terenceodonoghue/react-icons@workspace:packages/react-icons"
   dependencies:
+    "@svgr/core": ^6.2.1
     "@terenceodonoghue/svg-icons": "workspace:packages/svg-icons"
     concurrently: ^7.0.0
     eslint: ^8.12.0
+    lodash-es: ^4.17.21
+    mem-fs: ^2.2.1
+    mem-fs-editor: ^9.4.0
     rimraf: ^3.0.2
     typescript: ^4.6.3
+    xml2js: ^0.4.23
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -1782,8 +1787,12 @@ __metadata:
   dependencies:
     eslint: ^8.12.0
     glob: ^7.2.0
+    lodash-es: ^4.17.21
+    mem-fs: ^2.2.1
+    mem-fs-editor: ^9.4.0
     rimraf: ^3.0.2
     svgo: ^2.8.0
+    xml2js: ^0.4.23
   languageName: unknown
   linkType: soft
 
@@ -5115,11 +5124,9 @@ __metadata:
     "@changesets/cli": ^2.21.1
     "@nrwl/cli": latest
     "@nrwl/workspace": latest
-    "@svgr/core": ^6.2.1
     "@types/react": ^17.0.43
     "@typescript-eslint/eslint-plugin": ^5.16.0
     "@typescript-eslint/parser": ^5.16.0
-    ejs: ^3.1.6
     eslint: ^8.12.0
     eslint-config-airbnb: ^19.0.4
     eslint-config-next: ^12.1.1
@@ -5129,14 +5136,10 @@ __metadata:
     eslint-plugin-prettier: 4.0.0
     eslint-plugin-react: ^7.29.4
     eslint-plugin-react-hooks: ^4.3.0
-    lodash-es: ^4.17.21
-    mem-fs: ^2.2.1
-    mem-fs-editor: ^9.4.0
     nx: ^13.9.5
     prettier: 2.6.1
     stylelint: ^14.6.1
     stylelint-prettier: ^2.0.0
-    xml2js: ^0.4.23
   languageName: unknown
   linkType: soft
 
@@ -9272,11 +9275,15 @@ resolve@^2.0.0-next.3:
     "@terenceodonoghue/react-icons": "workspace:packages/react-icons"
     autoprefixer: ^10.4.4
     eslint: ^8.12.0
+    lodash-es: ^4.17.21
+    mem-fs: ^2.2.1
+    mem-fs-editor: ^9.4.0
     next: ^12.1.1
     postcss: ^8.4.12
     react: ^17.0.2
     react-dom: ^17.0.2
     tailwindcss: ^3.0.23
+    xml2js: ^0.4.23
   languageName: unknown
   linkType: soft
 
