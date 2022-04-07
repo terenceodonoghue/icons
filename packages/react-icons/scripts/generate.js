@@ -44,7 +44,6 @@ const iconTemplate = (
 };
 
 const indexTemplate = resolve(__dirname, '../templates/index.ts.ejs');
-const packageJsonTemplate = resolve(__dirname, '../templates/package.json.ejs');
 
 Promise.all(
   Object.entries(iconSets).map(([iconSetName, iconSet]) => {
@@ -101,14 +100,6 @@ Promise.all(
           },
         );
       }),
-    );
-
-    fs.copyTpl(
-      packageJsonTemplate,
-      resolve(__dirname, '../dist/cjs/package.json'),
-      {
-        type: `"commonjs"`,
-      },
     );
 
     return fs.commit();

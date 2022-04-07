@@ -11,16 +11,12 @@
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
-    "./fantasticons": {
-      "import": "./dist/mjs/fantasticons/index.js",
-      "require": "./dist/cjs/fantasticons/index.js"
-    }
+    "./fantasticons": "./dist/fantasticons/index.js"
   },
   "typesVersions": {
     "*": {
       "fantasticons": [
-        "./dist/mjs/fantasticons/index.d.ts",
-        "./dist/cjs/fantasticons/index.d.ts"
+        "./dist/fantasticons/index.d.ts"
       ]
     }
   },
@@ -28,21 +24,16 @@
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "scripts": {
-    "build": "node scripts/generate.js && yarn concurrently \"yarn:build:*\"",
-    "build:cjs": "tsc -p tsconfig-cjs.json",
-    "build:mjs": "tsc -p tsconfig-mjs.json",
+    "build": "node scripts/generate.js && tsc",
     "clean": "rimraf ./dist \"./out-svgr/*/\"",
     "lint": "eslint --ext .js,.ts,.tsx --ignore-path ../../.eslintignore --max-warnings=0 ./"
   },
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "@terenceodonoghue/svg-icons": "workspace:packages/svg-icons"
-  },
   "devDependencies": {
     "@svgr/core": "^6.2.1",
-    "concurrently": "^7.1.0",
+    "@terenceodonoghue/svg-icons": "workspace:^",
     "eslint": "^8.12.0",
     "lodash-es": "^4.17.21",
     "mem-fs": "^2.2.1",
