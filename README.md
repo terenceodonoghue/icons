@@ -17,11 +17,3 @@ npm login --scope=@terenceodonoghue --registry=https://npm.pkg.github.com
 > Password: TOKEN               # Personal access token
 > Email: PUBLIC-EMAIL-ADDRESS   # Email address (this will be public)
 ```
-
-### Install
-
-Choose your frontend from the below list.
-
-|                                Library                                 | Package                         |                                          |
-| :--------------------------------------------------------------------: | ------------------------------- | ---------------------------------------- |
-| <img alt="React" src="./docs/assets/react.svg" height="36" width="36"> | `@terenceodonoghue/react-icons` | [Docs](./packages/react-icons/README.md) |

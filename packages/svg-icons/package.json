@@ -8,6 +8,9 @@
     "url": "ssh://git@github.com/terenceodonoghue/icons.git",
     "directory": "packages/svg-icons"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
@@ -19,7 +22,9 @@
   "scripts": {
     "build": "node scripts/generate.js",
     "clean": "rimraf ./dist",
-    "lint": "eslint --ext .js --ignore-path ../../.eslintignore --max-warnings=0 ./"
+    "lint": "eslint --ext .js --ignore-path ../../.eslintignore --max-warnings=0 ./",
+    "prepack": "yarn build",
+    "prepublish": "yarn lint"
   },
   "files": [
     "dist"
