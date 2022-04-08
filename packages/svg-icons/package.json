@@ -1,24 +1,20 @@
 {
   "name": "@terenceodonoghue/svg-icons",
-  "packageManager": "yarn@3.2.0",
   "version": "1.0.0",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/terenceodonoghue/icons.git",
     "directory": "packages/svg-icons"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
+  "license": "MIT",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
     "./fantasticons": "./dist/fantasticons/index.js"
   },
-  "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "node scripts/generate.js",
     "clean": "rimraf ./dist",
@@ -26,9 +22,6 @@
     "prepack": "yarn build",
     "prepublish": "yarn lint"
   },
-  "files": [
-    "dist"
-  ],
   "devDependencies": {
     "eslint": "^8.12.0",
     "glob": "^7.2.0",
@@ -38,5 +31,12 @@
     "rimraf": "^3.0.2",
     "svgo": "^2.8.0",
     "xml2js": "^0.4.23"
+  },
+  "packageManager": "yarn@3.2.0",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

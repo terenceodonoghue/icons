@@ -1,16 +1,12 @@
 {
   "name": "@terenceodonoghue/react-icons",
-  "packageManager": "yarn@3.2.0",
   "version": "1.0.0",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/terenceodonoghue/icons.git",
     "directory": "packages/react-icons"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
+  "license": "MIT",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
@@ -23,9 +19,9 @@
       ]
     }
   },
-  "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "node scripts/generate.js && tsc",
     "clean": "rimraf ./dist \"./out-svgr/*/\"",
@@ -33,9 +29,6 @@
     "prepack": "yarn build",
     "prepublish": "yarn lint"
   },
-  "files": [
-    "dist"
-  ],
   "devDependencies": {
     "@svgr/core": "^6.2.1",
     "@terenceodonoghue/svg-icons": "workspace:^",
@@ -50,5 +43,12 @@
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
+  },
+  "packageManager": "yarn@3.2.0",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
