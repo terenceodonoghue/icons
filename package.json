@@ -1,8 +1,6 @@
 {
-  "name": "icons",
+  "name": "@terenceodonoghue/icons",
   "private": true,
-  "license": "MIT",
-  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "workspaces": [
     "apps/*",
     "packages/*"

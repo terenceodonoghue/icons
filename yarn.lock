@@ -1762,6 +1762,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@terenceodonoghue/icons@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@terenceodonoghue/icons@workspace:."
+  dependencies:
+    "@changesets/cli": ^2.22.0
+    "@nrwl/cli": ^13.9.6
+    "@nrwl/workspace": ^13.9.6
+    "@terenceodonoghue/prettier-plugin-packagejson": ^1.0.1
+    "@types/react": ^17.0.43
+    "@typescript-eslint/eslint-plugin": ^5.17.0
+    "@typescript-eslint/parser": ^5.17.0
+    eslint: ^8.12.0
+    eslint-config-airbnb: ^19.0.4
+    eslint-config-next: ^12.1.4
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-import: ^2.25.4
+    eslint-plugin-jsx-a11y: ^6.5.1
+    eslint-plugin-prettier: 4.0.0
+    eslint-plugin-react: ^7.29.4
+    eslint-plugin-react-hooks: ^4.4.0
+    nx: ^13.9.6
+    prettier: 2.6.2
+    stylelint: ^14.6.1
+    stylelint-prettier: ^2.0.0
+  languageName: unknown
+  linkType: soft
+
 "@terenceodonoghue/prettier-plugin-packagejson@npm:^1.0.1":
   version: 1.0.1
   resolution: "@terenceodonoghue/prettier-plugin-packagejson@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40terenceodonoghue%2Fprettier-plugin-packagejson%2F1.0.1%2F29d5ab32d4dd53d3b454b41b71c99c4863b435d745f547961b21ee367ba29f2b"
@@ -5133,33 +5160,6 @@ __metadata:
   checksum: 9c7a74a2827f9294c009266c82031030eae811ca87b0da3dceb8d6071b9bde22c9f3daef0469c3c533cc67a97d8a167cd9fc0389350e5f415f61a79b171ded16
   languageName: node
   linkType: hard
-
-"icons@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "icons@workspace:."
-  dependencies:
-    "@changesets/cli": ^2.22.0
-    "@nrwl/cli": ^13.9.6
-    "@nrwl/workspace": ^13.9.6
-    "@terenceodonoghue/prettier-plugin-packagejson": ^1.0.1
-    "@types/react": ^17.0.43
-    "@typescript-eslint/eslint-plugin": ^5.17.0
-    "@typescript-eslint/parser": ^5.17.0
-    eslint: ^8.12.0
-    eslint-config-airbnb: ^19.0.4
-    eslint-config-next: ^12.1.4
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-import: ^2.25.4
-    eslint-plugin-jsx-a11y: ^6.5.1
-    eslint-plugin-prettier: 4.0.0
-    eslint-plugin-react: ^7.29.4
-    eslint-plugin-react-hooks: ^4.4.0
-    nx: ^13.9.6
-    prettier: 2.6.2
-    stylelint: ^14.6.1
-    stylelint-prettier: ^2.0.0
-  languageName: unknown
-  linkType: soft
 
 "iconv-lite@npm:0.4.24, iconv-lite@npm:^0.4.24":
   version: 0.4.24
