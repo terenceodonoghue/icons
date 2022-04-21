@@ -1,5 +1,5 @@
 {
-  "name": "@terenceodonoghue/web",
+  "name": "@terenceodonoghue/fantasticons",
   "private": true,
   "scripts": {
     "build": "next build",
