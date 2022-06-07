@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { transform } from '@svgr/core';
 import * as fantasticons from '@terenceodonoghue/svg-icons/fantasticons';
+import * as velocity from '@terenceodonoghue/svg-icons/velocity';
 import { upperFirst } from 'lodash-es';
 import memFs from 'mem-fs';
 import editor from 'mem-fs-editor';
@@ -20,6 +21,7 @@ const fs = editor.create(store);
 
 const iconSets = {
   fantasticons,
+  velocity,
 };
 
 const iconTemplate = (
@@ -66,8 +68,7 @@ Promise.all(
           {
             icon: true,
             replaceAttrValues: {
-              '#000': '{fill || "currentColor"}',
-              '#fff': '{fill || "currentColor"}',
+              currentColor: '{fill || "currentColor"}',
             },
             svgo: false,
             template: iconTemplate,

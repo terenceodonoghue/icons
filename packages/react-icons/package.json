@@ -10,12 +10,16 @@
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "type": "module",
   "exports": {
-    "./fantasticons": "./dist/fantasticons/index.js"
+    "./fantasticons": "./dist/fantasticons/index.js",
+    "./velocity": "./dist/velocity/index.js"
   },
   "typesVersions": {
     "*": {
       "fantasticons": [
         "./dist/fantasticons/index.d.ts"
+      ],
+      "velocity": [
+        "./dist/velocity/index.d.ts"
       ]
     }
   },

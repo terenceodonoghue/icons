@@ -38,7 +38,17 @@ glob('**/*.svg', { cwd: resolve(__dirname, '../svg') }, async (err, files) => {
 
       const { data } = optimize(fs.read(resolve(__dirname, '../svg', file)), {
         multipass: true,
-        plugins: ['preset-default', 'removeDimensions', 'removeXMLNS'],
+        plugins: [
+          {
+            name: 'convertColors',
+            params: {
+              currentColor: true,
+            },
+          },
+          'preset-default',
+          'removeDimensions',
+          'removeXMLNS',
+        ],
       });
 
       const result = await parseStringPromise(data);
