@@ -1,5 +1,11 @@
 # @terenceodonoghue/svg-icons
 
+## 1.1.0
+
+### Minor Changes
+
+- 3644870: Default fill to currentColor, add Velocity icons
+
 ## 1.0.1
 
 ### Patch Changes
