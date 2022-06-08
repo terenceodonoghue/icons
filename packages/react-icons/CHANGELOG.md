@@ -1,5 +1,11 @@
 # @terenceodonoghue/react-icons
 
+## 1.1.1
+
+### Patch Changes
+
+- c1f4fe0: Add more Velocity icons
+
 ## 1.1.0
 
 ### Minor Changes
